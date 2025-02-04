@@ -15,6 +15,21 @@
 
 ### Usage with Claude Desktop
 
+First build the server:
+
+```bash
+git clone https://github.com/KBB99/mcp-registry-server.git
+cd mcp-registry-server
+npm install
+npm run build
+```
+
+You can confirm the server is working by running:
+
+```bash
+node ./dist/index.js
+```
+
 Add this to your `claude_desktop_config.json`:
 
 ```json
