@@ -7,7 +7,7 @@
 ## Tools
 
 - **retrieve_mcps**
-  - Perform retrieval operations using the AWS Knowledge Base.
+  - Perform retrieval operations against the MCP registry.
   - Inputs:
     - `query` (string): The search query for retrieval.
 
