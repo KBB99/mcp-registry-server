@@ -21,7 +21,6 @@ interface RAGSource {
 async function retrieveContext(
   query: string,
 ): Promise<{
-  context: string;
   isRagWorking: boolean;
   ragSources: RAGSource[];
 }> {
@@ -29,7 +28,6 @@ async function retrieveContext(
     if (!query) {
       console.error("Query was not provided");
       return {
-        context: "Please provide a query to retrieve context for.",
         isRagWorking: false,
         ragSources: [],
       };
@@ -45,26 +43,15 @@ async function retrieveContext(
     },
   ).then((res: { json: () => any; }) => res.json());
 
-    const context = response
     const ragSources = response
-    // const rawResults = JSON.parse(response.body) || [];
-    // const ragSources: RAGSource[] = rawResults
-    //   .filter((res: { content: { text: any; }; }) => res?.content?.text)
-    //   .map((res: { content: { text: any; }; }) => ({ query: res.content.text }));
-
-    // const context = rawResults
-    //   .filter((res: { content: { text: any; }; }) => res?.content?.text)
-    //   .map((res: { content: { text: any; }; }) => res.content.text)
-    //   .join("\n");
-
+    
     return {
-      context,
       isRagWorking: true,
       ragSources,
     };
   } catch (error) {
     console.error("RAG Error:", error);
-    return { context: "", isRagWorking: false, ragSources: [] };
+    return { isRagWorking: false, ragSources: [] };
   }
 }
 
@@ -109,7 +96,6 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       if (result.isRagWorking) {
         return {
           content: [
-            { type: "text", text: `Context: ${result.context}` },
             { type: "text", text: `RAG Sources: ${JSON.stringify(result.ragSources)}` },
           ],
         };
