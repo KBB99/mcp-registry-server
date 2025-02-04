@@ -1,5 +1,7 @@
 # MCP Registry Server
 
+[![smithery badge](https://smithery.ai/badge/@KBB99/mcp-registry-server)](https://smithery.ai/server/@KBB99/mcp-registry-server)
+
 ## Features
 
 - **MCP Retriever**: Retrieve MCP Servers using semantic search
@@ -12,6 +14,16 @@
     - `query` (string): The search query for retrieval.
 
 ## Configuration
+
+### Installation Guide
+
+### Installing via Smithery
+
+To install MCP Registry Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@KBB99/mcp-registry-server):
+
+```bash
+npx -y @smithery/cli install @KBB99/mcp-registry-server --client claude
+```
 
 ### Usage with Claude Desktop
 
@@ -50,3 +62,4 @@ Add this to your `claude_desktop_config.json`:
 This MCP server is licensed under the MIT License. This means you are free to use, modify, and distribute the software, subject to the terms and conditions of the MIT License. For more details, please see the LICENSE file in the project repository.
 
 This README assumes that your server package is named `mcp-server-retriever`. Adjust the package name and installation details if they differ in your setup. Also, ensure that your server script is correctly built and that all dependencies are properly managed in your `package.json`.
+
