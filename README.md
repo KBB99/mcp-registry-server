@@ -49,10 +49,10 @@ Add this to your `claude_desktop_config.json`:
 ```json
 {
   "mcpServers": {
-    "mcp-server-retriever": {
+    "mcp-registry-server": {
       "command": "node",
       "args": [
-        "./path/to/build/mcp-server-retriever/dist/index.js",
+        "./path/to/build/mcp-registry-server/dist/index.js",
       ]
     }
   }
