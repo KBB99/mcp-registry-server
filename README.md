@@ -6,6 +6,8 @@
 
 - **MCP Retriever**: Retrieve MCP Servers using semantic search
 
+<a href="https://glama.ai/mcp/servers/8pg7mzcpt8"><img width="380" height="200" src="https://glama.ai/mcp/servers/8pg7mzcpt8/badge" alt="mcp-registry-server MCP server" /></a>
+
 ## Tools
 
 - **retrieve_mcps**
