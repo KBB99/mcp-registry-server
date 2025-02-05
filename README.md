@@ -49,7 +49,7 @@ Add this to your `claude_desktop_config.json`:
 ```json
 {
   "mcpServers": {
-    "aws-kb-retrieval": {
+    "mcp-server-retriever": {
       "command": "node",
       "args": [
         "./path/to/build/mcp-server-retriever/dist/index.js",
