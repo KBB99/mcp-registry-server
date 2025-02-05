@@ -52,7 +52,7 @@ Add this to your `claude_desktop_config.json`:
     "mcp-registry-server": {
       "command": "node",
       "args": [
-        "./path/to/build/mcp-registry-server/dist/index.js",
+        "./path/to/build/mcp-registry-server/dist/index.js"
       ]
     }
   }
